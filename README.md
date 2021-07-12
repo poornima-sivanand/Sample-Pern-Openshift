@@ -12,18 +12,18 @@ How to use this Repo?
 5. Login to the openshift namespace from your local machine.
 6. To deploy the database, run:
 
-` oc process -f openshift/database/db-secrets.yaml | oc apply -f - `
+  ` oc process -f openshift/database/db-secrets.yaml | oc apply -f - `
 
-followed by,
-
-` oc process -f openshift/database/db-secrets.yaml | oc apply -f - `
+  followed by,
+ 
+  ` oc process -f openshift/database/db-secrets.yaml | oc apply -f - `
 
 7. To deploy the back end:
 
-Build the backend:
- ` oc process -f openshift/server/bc.yaml | oc apply -f - `
-Deploy the backend:
- ` oc process -f openshift/server/dc.yaml -p SERVER_ROUTE='<ROUTE-for-server>'| oc apply -f - `
+    7.1 Build the backend:
+      ` oc process -f openshift/server/bc.yaml | oc apply -f - `
+    7.2 Deploy the backend:
+      ` oc process -f openshift/server/dc.yaml -p SERVER_ROUTE='<ROUTE-for-server>'| oc apply -f - `
 
 8. To deploy the frontend:
 
