@@ -22,6 +22,7 @@ How to use this Repo?
 
     7.1 Build the backend:
       ` oc process -f openshift/server/bc.yaml | oc apply -f - `
+      
     7.2 Deploy the backend:
       ` oc process -f openshift/server/dc.yaml -p SERVER_ROUTE='<ROUTE-for-server>'| oc apply -f - `
 
