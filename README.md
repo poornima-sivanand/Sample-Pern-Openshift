@@ -27,10 +27,10 @@ Deploy the backend:
 
 8. To deploy the frontend:
 
-8.1. Edit client/src/components/EditTodo.js, and replace <REPLACE_WITH_SERVER_ROUTE> with the server route on line 13.
-8.2. Edit client/src/components/InputTodo.js, and replace <REPLACE_WITH_SERVER_ROUTE> with the server route on line 10.
-8.3. Edit client/src/components/ListTodo.js, and replace <REPLACE_WITH_SERVER_ROUTE> with the server route on line 12 and 24.
-8.4. Build the backend:
- ` oc process -f openshift/client/bc.yaml | oc apply -f - `
-8.5. Deploy the backend:
+ 8.1. Edit client/src/components/EditTodo.js, and replace <REPLACE_WITH_SERVER_ROUTE> with the server route on line 13.
+ 8.2. Edit client/src/components/InputTodo.js, and replace <REPLACE_WITH_SERVER_ROUTE> with the server route on line 10.
+ 8.3. Edit client/src/components/ListTodo.js, and replace <REPLACE_WITH_SERVER_ROUTE> with the server route on line 12 and 24.
+ 8.4. Build the backend:
+  ` oc process -f openshift/client/bc.yaml | oc apply -f - `
+ 8.5. Deploy the backend:
  ` oc process -f openshift/client/dc.yaml -p ROUTE='<ROUTE-for-client>' | oc apply -f - `
