@@ -1,0 +1,5 @@
+sqltools*
+.vscode*
+.DS*
+node_modules/*
+node_modules
